@@ -1,11 +1,11 @@
 package dugeonDragon.protection;
 public abstract class DefenseItem {
 	
-	private String protectionName;
-	private int protectionLvl;
+	private String defenseItemName;
+	private int defenseItemLvl;
 
 	public DefenseItem() {
-		this("Undefined protection");
+		this("Unnamed defense item");
 	}
 	
 	public DefenseItem(String name) {
@@ -22,25 +22,25 @@ public abstract class DefenseItem {
 	 */
 
 	public String toString() {
-		return ("\nHis protection name is : " + this.protectionName + "\nHis protection level is : " + this.protectionLvl);
+		return ("\n - Defense item name : " + this.defenseItemName + "\n - Defense item level : " + this.defenseItemLvl);
 	}
 	
 	// GETTEURS et SETTEURS ___________________________________________________________________________
 	// Pour pouvoir utiliser les attributs privates de la classe.
 	
-	public String getProtectionName() {
-		return protectionName;
+	public String getDefenseItemName() {
+		return defenseItemName;
 	}
 
-	protected void setName(String protectionName) {
-		this.protectionName = protectionName;
+	protected void setName(String defenseItemName) {
+		this.defenseItemName = defenseItemName;
 	}
 
-	public int getProtectionLvl() {
-		return protectionLvl;
+	public int getDefenseItemLvl() {
+		return defenseItemLvl;
 	}
 
-	protected void setLevel(int protectionLvl) {
-		this.protectionLvl = protectionLvl;
+	protected void setLevel(int defenseItemLvl) {
+		this.defenseItemLvl = defenseItemLvl;
 	}
 }

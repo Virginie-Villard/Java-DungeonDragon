@@ -6,12 +6,12 @@ import dugeonDragon.protection.DefenseItem;
 
 public class Character {
 
-	protected String name;
-	protected String defaultName = "Bob";
+	private String name;
+	private String defaultName = "Bob";
 
-	protected int life;
-	protected int force;
-	protected int intel;
+	private int life;
+	private int force;
+	private int intel;
 	protected AttackItem attackItem;
 	protected DefenseItem defenseItem;
 
@@ -23,7 +23,8 @@ public class Character {
 		this(name, 9, 10, null, null);
     }
 	
-	public Character(String name, int life, int force, AttackItem attackItem, DefenseItem defenseItem) {
+	public Character(String name, int life, int force, 
+			AttackItem attackItem, DefenseItem defenseItem) {
 		this.setName(name);
 		this.setLife(life);
 		this.setForce(force);
@@ -47,19 +48,19 @@ public class Character {
 	// Pour pouvoir utiliser les attributs privates de la classe.
 
 
-	private int getLife() {
+	protected int getLife() {
 		return life;
 	}
 
-	private void setLife(int life) {
+	protected void setLife(int life) {
 		this.life = life;
 	}
 
-	private String getName() {
+	protected String getName() {
 		return name;
 	}
 
-	private void setName(String name) {
+	protected void setName(String name) {
 		if(name.isEmpty() || name == null) {
 			this.name = this.defaultName;
 		} else {
@@ -68,27 +69,27 @@ public class Character {
 		System.out.println("Set character name: "+this.name);
 	}
 
-	private int getForce() {
+	protected int getForce() {
 		return force;
 	}
 
-	private void setForce(int force) {
+	protected void setForce(int force) {
 		this.force = force;
 	}
 
-	private AttackItem getAttackItem() {
+	protected AttackItem getAttackItem() {
 		return attackItem;
 	}
 
-	private void setAttackItem(AttackItem attackItem) {
+	protected void setAttackItem(AttackItem attackItem) {
 		this.attackItem = attackItem;
 	}
 
-	private DefenseItem getDefenseItem() {
+	protected DefenseItem getDefenseItem() {
 		return defenseItem;
 	}
 
-	private void setDefenseItem(DefenseItem defenseItem) {
+	protected void setDefenseItem(DefenseItem defenseItem) {
 		this.defenseItem = defenseItem;
 	}
 }

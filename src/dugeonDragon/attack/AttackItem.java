@@ -22,14 +22,14 @@ public abstract class AttackItem {
 	 * apr�s que l'utilisateur ait choisi les champs string et tir� au sort les champs int.
 	*/
 	public String toString() {
-		return ("\nHis attack object name is : " + this.name + "\nHis attack object level is : " + this.attackLvl);
+		return ("\n - Attack item name : " + this.name + "\n - Attack item level is : " + this.attackLvl);
 	}
 
 	
 	// GETTEURS et SETTEURS ___________________________________________________________________________
 	// Pour pouvoir utiliser les attributs privates de la classe.
 
-	public String getName() {
+	protected String getName() {
 		return name;
 	}
 
@@ -37,7 +37,7 @@ public abstract class AttackItem {
 		this.name = name;
 	}
 
-	public int getAttackLvl() {
+	protected int getAttackLvl() {
 		return attackLvl;
 	}
 

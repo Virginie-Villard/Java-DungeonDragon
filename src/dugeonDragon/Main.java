@@ -1,11 +1,13 @@
 package dugeonDragon;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-	    System.out.println("Hello fucking world");
-
-        TestGame tGame = new TestGame();
-        tGame.userChoice();
+    	System.out.println("Super jeu");
+		Scanner clavier = new Scanner(System.in);
+		TestGame tGame = new TestGame();
+		tGame.userChoice(clavier);
     }
 }
