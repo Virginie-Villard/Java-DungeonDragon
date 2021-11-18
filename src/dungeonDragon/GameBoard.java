@@ -1,4 +1,4 @@
-package dugeonDragon;
+package dungeonDragon;
 
 import java.util.*;
 

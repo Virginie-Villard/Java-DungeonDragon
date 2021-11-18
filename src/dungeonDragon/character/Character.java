@@ -1,17 +1,17 @@
-package dugeonDragon.character;
+package dungeonDragon.character;
 
 
-import dugeonDragon.attack.AttackItem;
 import dugeonDragon.protection.DefenseItem;
+import dungeonDragon.attack.AttackItem;
 
-public class Character {
+public abstract class Character {
 
 	private String name;
 	private String defaultName = "Bob";
 
 	private int life;
-	private int force;
-	private int intel;
+	private int force; // uniquement pour warrior !
+	private int intel; // uniquement pour wizard !
 	protected AttackItem attackItem;
 	protected DefenseItem defenseItem;
 

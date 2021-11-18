@@ -1,4 +1,4 @@
-package dugeonDragon;
+package dungeonDragon;
 
 /*
  * @see : https://www.geeksforgeeks.org/java-program-to-emulate-n-dice-roller/

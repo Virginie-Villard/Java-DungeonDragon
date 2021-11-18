@@ -1,9 +1,9 @@
-package dugeonDragon.character;
+package dungeonDragon.character;
 
-import dugeonDragon.attack.AttackItem;
-import dugeonDragon.attack.Spell;
 import dugeonDragon.protection.DefenseItem;
 import dugeonDragon.protection.Filter;
+import dungeonDragon.attack.AttackItem;
+import dungeonDragon.attack.Spell;
 
 public class Wizard extends Character {
 

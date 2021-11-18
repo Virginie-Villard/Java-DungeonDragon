@@ -1,11 +1,11 @@
-package dugeonDragon.character;
+package dungeonDragon.character;
 
-import dugeonDragon.attack.AttackItem;
-import dugeonDragon.attack.Spell;
-import dugeonDragon.attack.Weapon;
 import dugeonDragon.protection.DefenseItem;
 import dugeonDragon.protection.Filter;
 import dugeonDragon.protection.Shield;
+import dungeonDragon.attack.AttackItem;
+import dungeonDragon.attack.Spell;
+import dungeonDragon.attack.Weapon;
 
 public class Warrior extends Character {
 

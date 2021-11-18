@@ -1,4 +1,4 @@
-package dugeonDragon.attack;
+package dungeonDragon.attack;
 
 public class Spell extends AttackItem {
 	
