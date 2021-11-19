@@ -16,19 +16,19 @@ public class Menu {
 
 	public int userChoice() {
 
-		System.out.print("\n - 1 : Exit \n - 2 : Create a character  \n - 3 : display List ");
-		int userChoice = clavier.nextInt();
+		System.out.print("\n - 1 : Exit \n - 2 : Create a character \n - 3 : display List \n - 4 : Start Game ");
+		int userChoice = getClavier().nextInt();
 
 		/*
 		 * Prend en compte le saut de ligne du clavier fait avant l'entrée. Merci Rick !
 		 */
-		clavier.nextLine();
+		getClavier().nextLine();
 		return userChoice;
 	}
 
 	public AbstractCharacter chooseCharacter() {
 		System.out.print("\n - 1 : Create a Warrior \n - 2 : Create a Wizard ");
-		int userChoice = clavier.nextInt();
+		int userChoice = getClavier().nextInt();
 		AbstractCharacter newCharacter = null;
 		switch (userChoice) {
 
@@ -56,31 +56,31 @@ public class Menu {
 
 	private AbstractCharacter warrior() {
 		System.out.println("\nChoose your warrior name : ");
-		String warriorName = clavier.nextLine();
+		String warriorName = getClavier().nextLine();
 
 		System.out.print("\nLife level, press Enter to launch 5 dices : ");
-		clavier.nextLine();
+		getClavier().nextLine();
 		int launchDice1 = Dice.roll(5);
 		int lifeLvl = launchDice1;
 
 		System.out.print("\nAttack force, press Enter to launch 1 dice : ");
-		clavier.nextLine();
+		getClavier().nextLine();
 		int launchDice2 = Dice.roll(1);
 		int attackForce = launchDice2;
 
 		System.out.println("\nWeapon name ? ");
-		String weaponName = clavier.nextLine();
+		String weaponName = getClavier().nextLine();
 
 		System.out.print("\nWeapon attack level, press Enter to launch 1 dice : ");
-		clavier.nextLine();
+		getClavier().nextLine();
 		int launchDice3 = Dice.roll(1);
 		int weaponAttackLvl = launchDice3;
 
 		System.out.println("\nShield name ? ");
-		String shieldName = clavier.nextLine();
+		String shieldName = getClavier().nextLine();
 
 		System.out.print("\nShield defense level, press Enter to launch 1 dice : ");
-		clavier.nextLine();
+		getClavier().nextLine();
 		int launchDice4 = Dice.roll(1);
 		int shieldDefenseLvl = launchDice4;
 
@@ -95,44 +95,65 @@ public class Menu {
 
 	private AbstractCharacter wizard() {
 		System.out.print("\nChoose your wizard name : ");
-		String name = clavier.nextLine();
+		String name = getClavier().nextLine();
 
 		System.out.print("\nLife level, press Enter to launch 5 dices : ");
-		clavier.nextLine();
+		getClavier().nextLine();
 		int life = Dice.roll(5);
 
 		System.out.print("\nAttack force, press Enter to launch 1 dice : ");
-		clavier.nextLine();
+		getClavier().nextLine();
 		int force = Dice.roll(1);
 
 		System.out.println("\nSpell name ? ");
-		String spellName = clavier.nextLine();
+		String spellName = getClavier().nextLine();
 
 		System.out.print("\nSpell attack level, press Enter to launch 1 dice : ");
-		clavier.nextLine();
+		getClavier().nextLine();
 		int spellLvl = Dice.roll(1);
 
 		System.out.println("\nFilter ? ");
-		String filterName = clavier.nextLine();
+		String filterName = getClavier().nextLine();
 
 		System.out.print("\nFilter level, press Enter to launch 1 dice : ");
-		clavier.nextLine();
+		getClavier().nextLine();
 		int filterLvl = Dice.roll(1);
 
 		return new Wizard(name, life, force, spellName, spellLvl, filterName, filterLvl);
 	}
 
 	/*
-	 * ___EXIT_GAME_____________________________________________________________________
+___EXIT_GAME_____________________________________________________________________
 	 */
 
 	public void exitGame() {
 		System.out.println("\n \t \t___________\n \t \t  Game Over\n \t \t___________");
 	}
+	
+	/*
+___DISPLAY_LIST______________________________________________________________
+	 */
 
 	public void displayList(ArrayList<AbstractCharacter> herosList) {
 		for (AbstractCharacter charact : herosList) {
 			System.out.println(charact.toString());
 		}
+	}
+
+	/*
+	___GETTER_SETTER_________________________________________________________
+		 */
+	/**
+	 * @return the clavier
+	 */
+	public Scanner getClavier() {
+		return clavier;
+	}
+
+	/**
+	 * @param clavier the clavier to set
+	 */
+	public void setClavier(Scanner clavier) {
+		this.clavier = clavier;
 	}
 }
