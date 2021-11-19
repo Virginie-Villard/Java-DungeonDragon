@@ -1,4 +1,4 @@
-package dugeonDragon.protection;
+package dungeonDragon.gameBoard.protection;
 public abstract class DefenseItem {
 	
 	private String defenseItemName;

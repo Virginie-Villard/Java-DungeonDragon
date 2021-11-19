@@ -1,4 +1,6 @@
-package dungeonDragon.attack;
+package dungeonDragon.gameBoard.attack.spells;
+
+import dungeonDragon.gameBoard.attack.AttackItem;
 
 public class Spell extends AttackItem {
 	

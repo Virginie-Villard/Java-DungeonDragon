@@ -1,0 +1,37 @@
+package dungeonDragon.gameBoard.bonus;
+
+import dungeonDragon.gameBoard.Cell;
+
+public abstract class Bonus extends Cell {
+
+	protected String name;
+	protected String defaultName = "Bonus";
+
+	public Bonus() {
+		this("Undefined bonus");
+	}
+
+	public Bonus(String name) {
+		this(1, name);
+	}
+
+	public Bonus(int cellNumber, String name) {
+		super(cellNumber);
+		this.setName(name);
+	}
+
+	public String toString() {
+		return ("Bonus " + name + " : ");
+	}
+
+	// GETTERS et SETTERS ___________________________________________________________________________
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+}

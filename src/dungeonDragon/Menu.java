@@ -1,4 +1,3 @@
-// Déclaration du Package, nécéssaire.
 package dungeonDragon;
 
 import java.util.*;
@@ -55,31 +54,31 @@ public class Menu {
 	 */
 
 	private AbstractCharacter warrior() {
-		System.out.println("\nChoose your warrior name : ");
+		System.out.println("Choose your warrior name : ");
 		String warriorName = getClavier().nextLine();
 
-		System.out.print("\nLife level, press Enter to launch 5 dices : ");
+		System.out.print("Life level, press Enter to launch 5 dices : ");
 		getClavier().nextLine();
 		int launchDice1 = Dice.roll(5);
 		int lifeLvl = launchDice1;
 
-		System.out.print("\nAttack force, press Enter to launch 1 dice : ");
+		System.out.print("Attack force, press Enter to launch 1 dice : ");
 		getClavier().nextLine();
 		int launchDice2 = Dice.roll(1);
 		int attackForce = launchDice2;
 
-		System.out.println("\nWeapon name ? ");
+		System.out.println("Weapon name ? ");
 		String weaponName = getClavier().nextLine();
 
-		System.out.print("\nWeapon attack level, press Enter to launch 1 dice : ");
+		System.out.print("Weapon attack level, press Enter to launch 1 dice : ");
 		getClavier().nextLine();
 		int launchDice3 = Dice.roll(1);
 		int weaponAttackLvl = launchDice3;
 
-		System.out.println("\nShield name ? ");
+		System.out.println("Shield name ? ");
 		String shieldName = getClavier().nextLine();
 
-		System.out.print("\nShield defense level, press Enter to launch 1 dice : ");
+		System.out.print("Shield defense level, press Enter to launch 1 dice : ");
 		getClavier().nextLine();
 		int launchDice4 = Dice.roll(1);
 		int shieldDefenseLvl = launchDice4;

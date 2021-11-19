@@ -1,8 +1,8 @@
 package dungeonDragon.character;
 
 
-import dugeonDragon.protection.DefenseItem;
-import dungeonDragon.attack.AttackItem;
+import dungeonDragon.gameBoard.protection.DefenseItem;
+import dungeonDragon.gameBoard.attack.AttackItem;
 
 public abstract class AbstractCharacter {
 
@@ -10,8 +10,8 @@ public abstract class AbstractCharacter {
 	private String defaultName = "Bob";
 
 	private int life;
-	private int force; // uniquement pour warrior !
-	private int intel; // uniquement pour wizard !
+	private int force; //  TODO uniquement pour warrior !
+	private int intel; // TODO uniquement pour wizard !
 	protected AttackItem attackItem;
 	protected DefenseItem defenseItem;
 
@@ -36,11 +36,11 @@ public abstract class AbstractCharacter {
 	 * après que l'utilisateur ait choisi les champs string et tiré au sort les champs int.
 	 */
 	public String toString() {
-		return ("-- " + name + " --" +
-				"\nLife : " + this.life +
-				"\nForce : " + this.force +
-				"\nAttackItem : " + this.getAttackItem() +
-				"\nDefenseItem : " + this.getDefenseItem());
+		return ("\n||-- " + name + " --" +
+				"\n||Life : " + this.life +
+				"\n||Force : " + this.force +
+				"\n||AttackItem : " + this.getAttackItem() +
+				"\n||DefenseItem : " + this.getDefenseItem());
 	}
 	
 	
@@ -81,8 +81,12 @@ public abstract class AbstractCharacter {
 		return attackItem;
 	}
 
-	protected void setAttackItem(AttackItem attackItem) {
-		this.attackItem = attackItem;
+	protected void setAttackItem(AttackItem attackItem) { // TODO change void to AttackItem
+		//if(attackItem.equals(null) || attackItem.equals("")) {
+		//	this.attackItem = this.defaultAttackItem;
+		//} else {
+			this.attackItem = attackItem;
+		//}
 	}
 
 	protected DefenseItem getDefenseItem() {

@@ -1,4 +1,4 @@
-package dugeonDragon.protection;
+package dungeonDragon.gameBoard.protection;
 
 public class Filter extends DefenseItem {
 

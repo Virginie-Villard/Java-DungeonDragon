@@ -1,4 +1,4 @@
-package dungeonDragon.attack;
+package dungeonDragon.gameBoard.attack;
 
 public abstract class AttackItem {
 	

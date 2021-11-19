@@ -1,16 +1,12 @@
 package dungeonDragon;
 
 import java.util.ArrayList;
-// import dungeonDragon.Dice;
 import dungeonDragon.character.AbstractCharacter;
-
-// import java.util.Scanner;
 
 public class Game {
 	
 	private ArrayList<AbstractCharacter> characterList = new ArrayList<AbstractCharacter>();
 	Menu menu = new Menu();
-	// private int position = 1;
 	
 	public Game() {}
 	

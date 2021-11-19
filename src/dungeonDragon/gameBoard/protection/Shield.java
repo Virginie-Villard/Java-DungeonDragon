@@ -1,4 +1,4 @@
-package dugeonDragon.protection;
+package dungeonDragon.gameBoard.protection;
 
 public class Shield extends DefenseItem {
 	
