@@ -4,7 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
     	System.out.println("Super jeu");
-		// Scanner clavier = new Scanner(System.in);
 		
 		Game game = new Game();
 		game.startGame();
@@ -14,9 +13,7 @@ public class Main {
 		// menu.getWizardList();
     }
     
-    /* private ArrayList<Warrior> warriorList;
-    private ArrayList<Wizard> wizardList;
-    		
+    /*    		
     public boolean charactersReady() {
 		boolean isReady = false;
 		// switch !
