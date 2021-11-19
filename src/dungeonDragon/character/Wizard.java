@@ -5,7 +5,7 @@ import dugeonDragon.protection.Filter;
 import dungeonDragon.attack.AttackItem;
 import dungeonDragon.attack.Spell;
 
-public class Wizard extends Character {
+public class Wizard extends AbstractCharacter {
 
 	private String defaultName = "Sabrina";
 

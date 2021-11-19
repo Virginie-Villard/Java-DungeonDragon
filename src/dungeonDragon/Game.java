@@ -1,21 +1,33 @@
 package dungeonDragon;
 
+import java.util.ArrayList;
+import dungeonDragon.character.AbstractCharacter;
+
 // import java.util.Scanner;
 
 public class Game {
+	
+	public Game() {}
+	
 	Menu menu = new Menu();
 	
-	public int startGame() {
+	public void startGame() {
 		int choice = menu.userChoice();
-		if(choice == 2) {
-			chooseCharacter();
+		boolean exit = false;
+		
+		do {
+			if(choice == 1) {
+			menu.exitGame();
+			exit = true;
+			}
+			if(choice == 2) {
+				chooseCharacter();
+			}
 		}
-		return 0;
+		while (exit == false);
+			
 	}
 	public void chooseCharacter() {
-//		Character character = menu.chooseCharacter();
-//		characterList.add(character)
+		AbstractCharacter character = menu.chooseCharacter();
 	}
-	
-//	menu.displayMenu();
 }

@@ -1,11 +1,5 @@
 package dungeonDragon;
 
-// import java.util.ArrayList;
-// import java.util.Scanner;
-
-// import dugeonDragon.character.Warrior;
-// import dugeonDragon.character.Wizard;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -13,6 +7,7 @@ public class Main {
 		// Scanner clavier = new Scanner(System.in);
 		
 		Game game = new Game();
+		game.startGame();
 		// Menu menu = new Menu();
 		// menu.userChoice(clavier);
 		// menu.getWarriorList();

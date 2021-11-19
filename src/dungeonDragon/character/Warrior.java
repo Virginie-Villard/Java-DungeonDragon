@@ -7,7 +7,7 @@ import dungeonDragon.attack.AttackItem;
 import dungeonDragon.attack.Spell;
 import dungeonDragon.attack.Weapon;
 
-public class Warrior extends Character {
+public class Warrior extends AbstractCharacter {
 
 	private String defaultName = "Michel";
 

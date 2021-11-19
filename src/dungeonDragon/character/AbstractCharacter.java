@@ -4,7 +4,7 @@ package dungeonDragon.character;
 import dugeonDragon.protection.DefenseItem;
 import dungeonDragon.attack.AttackItem;
 
-public abstract class Character {
+public abstract class AbstractCharacter {
 
 	private String name;
 	private String defaultName = "Bob";
@@ -15,15 +15,15 @@ public abstract class Character {
 	protected AttackItem attackItem;
 	protected DefenseItem defenseItem;
 
-	public Character() {
+	public AbstractCharacter() {
         this("Undefined character");
     }
 	
-	public Character(String name) {
+	public AbstractCharacter(String name) {
 		this(name, 9, 10, null, null);
     }
 	
-	public Character(String name, int life, int force, 
+	public AbstractCharacter(String name, int life, int force, 
 			AttackItem attackItem, DefenseItem defenseItem) {
 		this.setName(name);
 		this.setLife(life);
@@ -66,7 +66,7 @@ public abstract class Character {
 		} else {
 			this.name = name;
 		}
-		System.out.println("Set character name: "+this.name);
+		// System.out.println("Set character name: "+this.name);
 	}
 
 	protected int getForce() {
