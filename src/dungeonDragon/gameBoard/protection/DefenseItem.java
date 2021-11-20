@@ -22,7 +22,7 @@ public abstract class DefenseItem {
 	 */
 
 	public String toString() {
-		return ("\n - Defense item name : " + this.defenseItemName + "\n - Defense item level : " + this.defenseItemLvl);
+		return ("\n||\t - Defense item name : " + this.defenseItemName + "\n||\t - Defense item level : " + this.defenseItemLvl);
 	}
 	
 	// GETTEURS et SETTEURS ___________________________________________________________________________

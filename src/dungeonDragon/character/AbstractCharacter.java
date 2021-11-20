@@ -36,11 +36,11 @@ public abstract class AbstractCharacter {
 	 * après que l'utilisateur ait choisi les champs string et tiré au sort les champs int.
 	 */
 	public String toString() {
-		return ("\n||-- " + name + " --" +
-				"\n||Life : " + this.life +
-				"\n||Force : " + this.force +
-				"\n||AttackItem : " + this.getAttackItem() +
-				"\n||DefenseItem : " + this.getDefenseItem());
+		return ("\n||\t -- " + name + " --" +
+				"\n||\t Life : " + this.life +
+				"\n||\t Force : " + this.force +
+				"\n||\t AttackItem : " + this.getAttackItem() +
+				"\n||\t DefenseItem : " + this.getDefenseItem());
 	}
 	
 	

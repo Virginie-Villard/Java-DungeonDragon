@@ -25,9 +25,9 @@ public class Game {
 			else if(choice == 3) {
 				menu.displayList(characterList);
 			}
-//			else if(choice == 4) {
-//				playGame();
-//			}
+			else if(choice == 4) {
+				playGame();
+			}
 		}
 		while (exit == false);	
 	}
@@ -54,23 +54,24 @@ public class Game {
 //		}
 //    }
 	
-//	public void playGame(boolean isReady) {
+	public void playGame() { // (boolean isReady) (Paramètre)
+		int position = 0;
 //		charactersReady();
-//		
+
 //		if(isReady) {
 //			System.out.println("isReady = " + isReady);
-//			
-//			do {
-//				System.out.print("\nPosition " + position + ", press Enter to launch 1 dice : ");
-//				menu.getClavier().nextLine();
-//				int diceRoll = Dice.roll(1);
-//				
-//				position += diceRoll;
-//			}
-//			while (position <= 64);
-//			
-//			System.out.print("\nYou win ! ");
-//			}
+
+			do {
+				System.out.print("\nPosition " + position + ", press Enter to launch 1 dice : ");
+				menu.getClavier().nextLine();
+				int diceRoll = Dice.roll(1);
+
+				position += diceRoll;
+			}
+			while (position <= 3); // TODO repasser à 64 !
+
+			System.out.print("\nYou win ! ");
+			}
 //		else {
 //			System.out.print("\nCreate a character to play : ");
 //			System.out.println("isReady is meant not to be ready : " + isReady);

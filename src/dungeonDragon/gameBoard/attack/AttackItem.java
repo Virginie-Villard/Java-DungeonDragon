@@ -22,7 +22,7 @@ public abstract class AttackItem {
 	 * apr�s que l'utilisateur ait choisi les champs string et tir� au sort les champs int.
 	*/
 	public String toString() {
-		return ("\n - Attack item name : " + this.name + "\n - Attack item level is : " + this.attackLvl);
+		return ("\n||\t - Attack item name : " + this.name + "\n||\t - Attack item level is : " + this.attackLvl);
 	}
 
 	
