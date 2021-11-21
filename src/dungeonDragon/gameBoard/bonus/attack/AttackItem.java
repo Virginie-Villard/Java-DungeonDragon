@@ -1,6 +1,8 @@
-package dungeonDragon.gameBoard.attack;
+package dungeonDragon.gameBoard.bonus.attack;
 
-public abstract class AttackItem {
+import dungeonDragon.gameBoard.Cell;
+
+public abstract class AttackItem extends Cell {
 	
 	private String name;
 	private int attackLvl;
@@ -10,10 +12,11 @@ public abstract class AttackItem {
 	}
 	
 	public AttackItem(String name) {
-		this(name, 2);
+		this(1,name, 2);
 	}
 	
 	public AttackItem(String name, int attackLvl) {
+		super(cellNumber);
 		this.setName(name);
 		this.setAttackLvl(attackLvl);
 	}

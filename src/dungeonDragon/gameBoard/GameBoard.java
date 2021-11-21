@@ -1,8 +1,10 @@
 package dungeonDragon.gameBoard;
 
-import java.util.*;
-
+import dungeonDragon.gameBoard.bonus.attack.weapons.Sword;
+import dungeonDragon.gameBoard.bonus.potions.LittlePotion;
 import dungeonDragon.gameBoard.enemy.Goblin;
+
+import java.util.ArrayList;
 
 public class GameBoard {
 
@@ -21,8 +23,8 @@ public class GameBoard {
 	{
 		cells.add(new Cell(0));
 		cells.add(new Goblin(1));
-		//gameBoard.add(new Sword(2));
-		//gameBoard.add(new LittlePotion(3));
+		cells.add(new Sword(2));
+		cells.add(new LittlePotion(3));
 
 //		for(int i = 0; i < COUNT; i++)
 //		{

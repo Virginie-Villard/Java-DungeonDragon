@@ -1,8 +1,8 @@
 package dungeonDragon.character;
 
 
-import dungeonDragon.gameBoard.protection.DefenseItem;
-import dungeonDragon.gameBoard.attack.AttackItem;
+import dungeonDragon.gameBoard.bonus.protection.DefenseItem;
+import dungeonDragon.gameBoard.bonus.attack.AttackItem;
 
 public abstract class AbstractCharacter {
 

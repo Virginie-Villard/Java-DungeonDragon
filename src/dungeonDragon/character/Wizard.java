@@ -1,9 +1,9 @@
 package dungeonDragon.character;
 
-import dungeonDragon.gameBoard.protection.DefenseItem;
-import dungeonDragon.gameBoard.protection.Filter;
-import dungeonDragon.gameBoard.attack.AttackItem;
-import dungeonDragon.gameBoard.attack.spells.Spell;
+import dungeonDragon.gameBoard.bonus.protection.DefenseItem;
+import dungeonDragon.gameBoard.bonus.protection.Filter;
+import dungeonDragon.gameBoard.bonus.attack.AttackItem;
+import dungeonDragon.gameBoard.bonus.attack.spells.Spell;
 
 public class Wizard extends AbstractCharacter {
 

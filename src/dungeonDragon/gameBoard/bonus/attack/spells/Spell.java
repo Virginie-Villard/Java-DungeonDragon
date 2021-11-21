@@ -1,6 +1,6 @@
-package dungeonDragon.gameBoard.attack.spells;
+package dungeonDragon.gameBoard.bonus.attack.spells;
 
-import dungeonDragon.gameBoard.attack.AttackItem;
+import dungeonDragon.gameBoard.bonus.attack.AttackItem;
 
 public class Spell extends AttackItem {
 	

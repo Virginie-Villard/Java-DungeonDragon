@@ -1,9 +1,9 @@
 package dungeonDragon.character;
 
-import dungeonDragon.gameBoard.protection.DefenseItem;
-import dungeonDragon.gameBoard.protection.Shield;
-import dungeonDragon.gameBoard.attack.AttackItem;
-import dungeonDragon.gameBoard.attack.weapons.Weapon;
+import dungeonDragon.gameBoard.bonus.protection.DefenseItem;
+import dungeonDragon.gameBoard.bonus.protection.Shield;
+import dungeonDragon.gameBoard.bonus.attack.AttackItem;
+import dungeonDragon.gameBoard.bonus.attack.weapons.Weapon;
 
 public class Warrior extends AbstractCharacter {
 

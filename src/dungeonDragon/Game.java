@@ -29,7 +29,7 @@ public class Game {
 				playGame();
 			}
 		}
-		while (exit == false);	
+		while (!exit);
 	}
 	
 	public void chooseCharacter() {
@@ -37,46 +37,62 @@ public class Game {
 		characterList.add(character);
 	}
 	
-//	public boolean charactersReady() {
-//		boolean isReady = false;
-//		
-//		if(characterList.isEmpty()) {
-//			System.out.println("You have to create a character to start the game...");
-//			return isReady;
-//		}
-//		else if(!characterList.isEmpty()) {
-//			System.out.println("Your character is in position 1");
-//			return isReady = true;
-//		}
-//		else {
-//			System.out.println("Critical error you will self-destruct !!!");
-//			return isReady;
-//		}
-//    }
+	public boolean charactersReady() {
+		boolean isReady = false;
+
+		if(characterList.isEmpty()) {
+			System.out.println("You have to create a character to start the game...");
+			isReady = false;
+			// return false;
+		}
+		else if(!characterList.isEmpty()) {
+			System.out.println("Your character is in position 1");
+			isReady = true;
+			//return true;
+		}
+		else {
+			System.out.println("Critical error you will self-destruct !!!");
+			isReady = false;
+			//return false;
+		}
+
+		return isReady;
+    }
+
+	/**
+	 * Better isReady function
+	 * @return
+	 */
+	private boolean hasCharacter()
+	{
+		return !characterList.isEmpty();
+	}
 	
 	public void playGame() { // (boolean isReady) (Paramètre)
 		int position = 0;
 //		charactersReady();
 
-//		if(isReady) {
+		if(charactersReady()) {
 //			System.out.println("isReady = " + isReady);
 
 			do {
 				System.out.print("\nPosition " + position + ", press Enter to launch 1 dice : ");
-				menu.getClavier().nextLine();
-				int diceRoll = Dice.roll(1);
-
-				position += diceRoll;
+//				menu.getClavier().nextLine();
+//				int diceRoll = Dice.roll(1);
+//
+//				position += diceRoll;
+				position += 1;
 			}
 			while (position <= 3); // TODO repasser à 64 !
 
 			System.out.print("\nYou win ! ");
-			}
+		}
 //		else {
 //			System.out.print("\nCreate a character to play : ");
 //			System.out.println("isReady is meant not to be ready : " + isReady);
 //		}
-//	}
+	}
+
 }
 
 

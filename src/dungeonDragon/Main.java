@@ -10,7 +10,9 @@ public class Main {
     }
 }
 
-
+// Diagramme UML : https://app.diagrams.net/#G1aq3c8h5TFVy58lBPG7XuhXxJBWmVP12P
+// https://www.youtube.com/watch?v=nRqTXoiNUHk
+// https://www.youtube.com/watch?v=nRqTXoiNUHk
 /* TODO
 - Rajouter class :
 	- potion (abstract / bonus)
@@ -25,7 +27,10 @@ public class Main {
 	- EnergyProtection (filter)
 et class filles si possible.
 
-- Ne pas oublier Dice dans UML
+- Vérifier les extends du package Bonus
+- Modifier l'héritage des cells....
+	- attackItem et class filles
+	- defenseItem et class filles
 - Boucle pour la création du plateau (Cf pour visuel compter en base 8)
 - Gérer les exceptions !
 - Commencer par faire marcher les 4 cases.
