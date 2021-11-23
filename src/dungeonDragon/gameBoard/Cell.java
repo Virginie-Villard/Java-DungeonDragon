@@ -1,6 +1,6 @@
 package dungeonDragon.gameBoard;
 
-public class Cell extends GameBoard {
+public class Cell {
 
 	protected int cellNumber;
 

@@ -9,11 +9,12 @@ import java.util.ArrayList;
 public class GameBoard {
 
 	private ArrayList<Cell> cells = new ArrayList<Cell>();
+	protected int idObject;
 
 	// @see: http://tutorials.jenkov.com/java-collections/set.html
 	// private Set<Integer> enemies = Set.of(2, 5);
 
-	private final int COUNT = 4;
+	// private final int COUNT = 4;
 
 	public GameBoard() {
 		initializeCells();

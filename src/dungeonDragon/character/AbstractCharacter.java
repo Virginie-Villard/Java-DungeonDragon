@@ -1,35 +1,28 @@
 package dungeonDragon.character;
 
-
-import dungeonDragon.gameBoard.bonus.protection.DefenseItem;
-import dungeonDragon.gameBoard.bonus.attack.AttackItem;
-
 public abstract class AbstractCharacter {
 
 	private String name;
 	private String defaultName = "Bob";
 
 	private int life;
-	private int force; //  TODO uniquement pour warrior !
-	private int intel; // TODO uniquement pour wizard !
-	protected AttackItem attackItem;
-	protected DefenseItem defenseItem;
+	private int force;
 
 	public AbstractCharacter() {
         this("Undefined character");
     }
 	
 	public AbstractCharacter(String name) {
-		this(name, 9, 10, null, null);
+		this(name, 9, 10 // , null, null
+		);
     }
 	
-	public AbstractCharacter(String name, int life, int force, 
-			AttackItem attackItem, DefenseItem defenseItem) {
+	public AbstractCharacter(String name, int life, int force
+			// , AttackItem attackItem, DefenseItem defenseItem
+	) {
 		this.setName(name);
 		this.setLife(life);
 		this.setForce(force);
-		this.setAttackItem(attackItem);
-		this.setDefenseItem(defenseItem);
 	}
 
 	/* Utilisation de la méthode toString() pour mettre en forme l'objet Character dans la console
@@ -38,9 +31,8 @@ public abstract class AbstractCharacter {
 	public String toString() {
 		return ("\n||\t -- " + name + " --" +
 				"\n||\t Life : " + this.life +
-				"\n||\t Force : " + this.force +
-				"\n||\t AttackItem : " + this.getAttackItem() +
-				"\n||\t DefenseItem : " + this.getDefenseItem());
+				"\n||\t Force : " + this.force // +
+			);
 	}
 	
 	
@@ -75,25 +67,5 @@ public abstract class AbstractCharacter {
 
 	protected void setForce(int force) {
 		this.force = force;
-	}
-
-	protected AttackItem getAttackItem() {
-		return attackItem;
-	}
-
-	protected void setAttackItem(AttackItem attackItem) { // TODO change void to AttackItem
-		//if(attackItem.equals(null) || attackItem.equals("")) {
-		//	this.attackItem = this.defaultAttackItem;
-		//} else {
-			this.attackItem = attackItem;
-		//}
-	}
-
-	protected DefenseItem getDefenseItem() {
-		return defenseItem;
-	}
-
-	protected void setDefenseItem(DefenseItem defenseItem) {
-		this.defenseItem = defenseItem;
 	}
 }

@@ -8,27 +8,22 @@ import dungeonDragon.gameBoard.bonus.attack.spells.Spell;
 public class Wizard extends AbstractCharacter {
 
 	private String defaultName = "Sabrina";
+	private int intelligence;
 
 	public Wizard() {
         this("");
     }
 
     public Wizard(String name) {
-		super(name, 9, 10, null, null);
+		super(name, 9, 2);
+		this.setIntelligence(2);
     }
 	
-	public Wizard(String name, int life, int force, 
-			AttackItem attackItem, DefenseItem defenseItem) {
-		super(name, life, force, attackItem, defenseItem);
+	public Wizard(String name, int life, int force, int intelligence) {
+		super(name, life, force);
+		this.setIntelligence(intelligence);
 	}
-	
-	public Wizard(String name, int life,
-				  int force, String spellName, int spellLvL,
-				  String filterName, int filterLvl) {
-		super(name, life, force,
-				new Spell(spellName, spellLvL),
-				new Filter(filterName, filterLvl));
-	}
+
 	
 	/* Utilisation de la méthode toString() 
 	 */
@@ -41,39 +36,22 @@ public class Wizard extends AbstractCharacter {
 	}*/
 	
 	// GETTERS et SETTERS ___________________________________________________________________________
-	// Pour pouvoir utiliser les attributs privates de la classe.
 
-	protected Spell getSpell() {
-		// type casting to Spell
-		// @see: https://www.w3schools.com/java/java_type_casting.asp
-		return (Spell) this.attackItem;
+	public String getDefaultName() {
+		return defaultName;
 	}
 
-	protected void setSpell(Spell spell) {
-		// A Spell is an AttackItem so it's ok
-		this.attackItem = spell;
+	public void setDefaultName(String defaultName) {
+		this.defaultName = defaultName;
 	}
 
-	protected Filter getFilter() {
-		// On vérifie que le defenceItem est bien de type Filter. Je le retourne en le castant.
-		// Sinon je retourne null.
-		// Pour ne pas permettre à un Wizard de prendre un Shield.
-		// @see https://www.javatpoint.com/downcasting-with-instanceof-operator
-		if (this.defenseItem instanceof Filter) {
-			return (Filter) this.defenseItem;
-		}
-		return null;
+	public int getIntelligence() {
+		return intelligence;
 	}
 
-	protected void setFilter(Filter filter) {
-
-		if(filter == null) {
-			this.defenseItem = new Filter("Pure energy shield", 1);
-		}
-		else {
-			this.defenseItem = filter;
-		}
-
-		System.out.println("Set filter name: " + this.defenseItem);
+	public void setIntelligence(int intelligence) {
+		intelligence = intelligence;
 	}
+
+
 }

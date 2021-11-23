@@ -7,7 +7,7 @@ public abstract class AttackItem extends Cell {
 	private String name;
 	private int attackLvl;
 
-	public AttackItem() {
+	public AttackItem(String name, int attackLvl) {
 		this("Unnamed attackObject");
 	}
 	
@@ -15,7 +15,7 @@ public abstract class AttackItem extends Cell {
 		this(1,name, 2);
 	}
 	
-	public AttackItem(String name, int attackLvl) {
+	public AttackItem(int cellNumber, String name, int attackLvl) {
 		super(cellNumber);
 		this.setName(name);
 		this.setAttackLvl(attackLvl);
