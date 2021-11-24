@@ -16,16 +16,16 @@ public class Main {
 /* TODO
 - Rajouter class :
 	- potion (abstract / bonus)
-	- LittlePotion (potions)
-	- MediumPotion (potions)
-	- Hammer (weapon)
-	- FireBall (spell)
-	- IceSpike (spell)
-	- IronShield (shield)
-	- ObsidianShield (shield)
-	- AstralProtection (filter)
-	- EnergyProtection (filter)
-et class filles si possible.
+	- LittlePotion (potions) (à mettre par défaut dans classe potion)
+	- MediumPotion (potions) (rajouter des effets dans la potion)
+	- Hammer (weapon) Axe (ajouter une attaque lourde par ex)
+	- FireBlast (spell) (voir pour spécificité)
+	- IceSpike (spell) (ajout de frozen (enlève 1 pt au dé puisque bloqué)
+	- IronShield (shield) (le mettre par défaut dans la classe bouclier)
+	- ObsidianShield (shield) (rajouter une différence d'absorbtion des dégâts)
+	- AstralProtection (filter) (rajouter une différence d'absorbtion des dégâts)
+	- EnergyProtection (filter) (le mettre par défaut dans la classe filtre)
+(et class filles si possible).
 
 - Vérifier les extends du package Bonus
 - Modifier l'héritage des cells....

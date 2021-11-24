@@ -8,6 +8,7 @@ import dungeonDragon.gameBoard.bonus.attack.weapons.Weapon;
 public class Warrior extends AbstractCharacter {
 
 	private String defaultName = "Michel";
+	private int strength;
 
 	// 3 Constructors
 	public Warrior() {
@@ -15,13 +16,14 @@ public class Warrior extends AbstractCharacter {
     }
 	
     public Warrior(String name) {
-        super(name, 9, 10);
+        super(name, 9, 2);
+		this.setStrength(2);
     }
 	
 	public Warrior(String name, int life,
 				   int force) {
-
 		super(name, life, force);
+		this.setStrength(strength);
 	}
 
 	// GETTERS et SETTERS _____________________________________________________________________
@@ -34,5 +36,13 @@ public class Warrior extends AbstractCharacter {
 
 	public void setDefaultName(String defaultName) {
 		this.defaultName = defaultName;
+	}
+
+	public int getStrength() {
+		return strength;
+	}
+
+	public void setStrength(int strength) {
+		this.strength = strength;
 	}
 }
