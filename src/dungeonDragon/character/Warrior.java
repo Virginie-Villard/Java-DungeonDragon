@@ -21,10 +21,12 @@ public class Warrior extends AbstractCharacter {
     }
 	
 	public Warrior(String name, int life,
-				   int force) {
+				   int force, int strength) {
 		super(name, life, force);
 		this.setStrength(strength);
 	}
+
+
 
 	// GETTERS et SETTERS _____________________________________________________________________
 	// Pour pouvoir utiliser les attributs privates de la classe.

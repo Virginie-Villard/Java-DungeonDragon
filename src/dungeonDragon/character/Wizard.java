@@ -24,17 +24,6 @@ public class Wizard extends AbstractCharacter {
 		this.setIntelligence(intelligence);
 	}
 
-	
-	/* Utilisation de la méthode toString() 
-	 */
-/*	public String toString() {
-		return ("-- " + name + " --" +
-				"\nHis Life level is : " + this.life +
-				"\nHis attack force is : " + this.force +
-				"\nSpell : " + this.getSpell() +
-				"\nHis filter is : " + this.getFilter());
-	}*/
-	
 	// GETTERS et SETTERS ___________________________________________________________________________
 
 	public String getDefaultName() {

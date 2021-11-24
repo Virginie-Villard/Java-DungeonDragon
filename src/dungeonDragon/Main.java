@@ -28,6 +28,8 @@ public class Main {
 (et class filles si possible).
 
 - Vérifier les extends du package Bonus
+- remove press enter pour les stats
+
 - Modifier l'héritage des cells....
 	- attackItem et class filles
 	- defenseItem et class filles

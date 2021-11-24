@@ -29,9 +29,11 @@ public abstract class AbstractCharacter {
 	 * après que l'utilisateur ait choisi les champs string et tiré au sort les champs int.
 	 */
 	public String toString() {
+
 		return ("\n||\t -- " + name + " --" +
 				"\n||\t Life : " + this.life +
-				"\n||\t Force : " + this.force // +
+				"\n||\t Force : " + this.force// +
+				// "\n||\t Specialty : " + specialty
 			);
 	}
 	
