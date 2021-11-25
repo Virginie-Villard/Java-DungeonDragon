@@ -1,27 +1,11 @@
 package dungeonDragon.gameBoard;
 
-public class Cell {
+import dungeonDragon.character.AbstractCharacter;
+import dungeonDragon.gameBoard.enemy.Goblin;
 
-	protected int cellNumber;
+public abstract class Cell {
 
-	public Cell() {}
+	// INTERACTIONS ________________________________________________________________________________
 
-	public Cell(int cellNumber) {
-		this.setCellNumber(cellNumber);
-	}
-
-	public String toString() {
-		return ("Cell " + cellNumber + " : ");
-	}
-
-	// GETTERS et SETTERS ___________________________________________________________________________
-
-
-	public int getCellNumber() {
-		return cellNumber;
-	}
-
-	public void setCellNumber(int cellNumber) {
-		this.cellNumber = cellNumber;
-	}
+	public abstract void interaction(AbstractCharacter abstractCharacter);
 }

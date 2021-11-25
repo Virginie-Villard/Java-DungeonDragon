@@ -1,5 +1,7 @@
 package dungeonDragon.gameBoard;
 
+import dungeonDragon.character.AbstractCharacter;
+import dungeonDragon.exceptions.OutOfBoard;
 import dungeonDragon.gameBoard.bonus.attack.weapons.Sword;
 import dungeonDragon.gameBoard.bonus.potions.LittlePotion;
 import dungeonDragon.gameBoard.enemy.Goblin;
@@ -10,28 +12,45 @@ public class GameBoard {
 
 	private ArrayList<Cell> cells = new ArrayList<Cell>();
 	protected int idObject;
+	private Goblin goblin = new Goblin();
 
-	// @see: http://tutorials.jenkov.com/java-collections/set.html
+	/** @link: http://tutorials.jenkov.com/java-collections/set.html */
 	// private Set<Integer> enemies = Set.of(2, 5);
 
 	// private final int COUNT = 4;
 
+	/**
+	 * Gameboard constructor
+	 */
 	public GameBoard() {
 		initializeCells();
 	}
 
 	private void initializeCells()
 	{
-		cells.add(new Cell(0));
-		cells.add(new Goblin(1));
-		cells.add(new Sword(2));
-		cells.add(new LittlePotion(3));
+		Cell cell1 = new EmptyCell();
+		cells.add(cell1);
+		Cell cell2 = new Goblin();
+		cells.add(cell2);
+		Cell cell3 = new Sword();
+		cells.add(cell3);
+		Cell cell4 = new LittlePotion();
+		cells.add(cell4);
+
 
 //		for(int i = 0; i < COUNT; i++)
 //		{
 //			if (enemies.contains(i))
 //			{
 //				cells.add(new Goblin(i));
+//			}
+//			else if(enemies.contains(i))
+//			{
+//				cells.add(new Witch(i));
+//			}
+//			else if(enemies.contains(i))
+//			{
+//				cells.add(new Dragon(i));
 //			}
 //			else
 //			{
@@ -40,11 +59,16 @@ public class GameBoard {
 //		}
 	}
 
-/*	public void gameBoard(int cellNumber) {
-		gameBoard.add(new EmptyCell(cellNumber));
-//		gameBoard.add(new Goblin(cellNumber));
-// 		gameBoard.add(new Sword(cellNumber));
-//		gameBoard.add(new LittlePotion(cellNumber));
-	}*/
-	
+	/**
+	 * @param position
+	 * @return the character position
+	 * @throws OutOfBoard
+	 * error management if character is out oh the Board.
+	 */
+	public Cell getCell(int position) throws OutOfBoard {
+		if(position >= cells.size()) {
+			throw new OutOfBoard();
+		}
+		return cells.get(position);
+	}
 }

@@ -12,11 +12,6 @@ public abstract class Bonus extends Cell {
 	}
 
 	public Bonus(String name) {
-		this(1, name);
-	}
-
-	public Bonus(int cellNumber, String name) {
-		super(cellNumber);
 		this.setName(name);
 	}
 

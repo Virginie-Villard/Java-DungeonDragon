@@ -1,14 +1,20 @@
 package dungeonDragon.gameBoard.bonus.attack.spells;
 
+import dungeonDragon.character.AbstractCharacter;
 import dungeonDragon.gameBoard.bonus.attack.AttackItem;
 
 public class Spell extends AttackItem {
 
-	public Spell(int cellNumber) {
-		super(cellNumber, "Fire Blast", 2);
+	public Spell() {
+		super("Fire Blast", 2);
 	}
 
-	public Spell(int cellNumber, String name, int attackLvl) {
-		super(cellNumber, name, attackLvl);
+	public Spell(String name, int attackLvl) {
+		super(name, attackLvl);
+	}
+
+	@Override
+	public void interaction(AbstractCharacter abstractCharacter) {
+		System.out.println("Undefined Spell");
 	}
 }

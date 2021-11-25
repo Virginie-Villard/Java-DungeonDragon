@@ -4,17 +4,10 @@ import dungeonDragon.gameBoard.Cell;
 
 public abstract class Potion extends Cell {
 
-    private String name;
-    private int healing;
+    protected String name;
+    protected int healing;
 
-    public Potion(int cellNumber) {
-        super(cellNumber);
-        this.setName(name);
-        this.setHealing(healing);
-    }
-
-    public Potion(int cellNumber, String name, int healing) {
-        super(cellNumber);
+    public Potion(String name, int healing) {
         this.setName(name);
         this.setHealing(healing);
 

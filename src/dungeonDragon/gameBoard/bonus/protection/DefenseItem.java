@@ -1,5 +1,8 @@
 package dungeonDragon.gameBoard.bonus.protection;
-public abstract class DefenseItem {
+
+import dungeonDragon.gameBoard.Cell;
+
+public abstract class DefenseItem extends Cell {
 	
 	private String defenseItemName;
 	private int defenseItemLvl;
@@ -24,6 +27,8 @@ public abstract class DefenseItem {
 	public String toString() {
 		return ("\n||\t - Defense item name : " + this.defenseItemName + "\n||\t - Defense item level : " + this.defenseItemLvl);
 	}
+
+
 	
 	// GETTEURS et SETTEURS ___________________________________________________________________________
 	// Pour pouvoir utiliser les attributs privates de la classe.

@@ -29,10 +29,11 @@ public class Main {
 
 - Vérifier les extends du package Bonus
 - remove press enter pour les stats
-
-- Modifier l'héritage des cells....
-	- attackItem et class filles
-	- defenseItem et class filles
+- tirage au sort l'attribution des cases
+(lui donner des stats différentes en fonction de l'endroit sur le plateau)
+exemple case 1, a plus de chance d'obtenir une récompense ou un ennemi faible
+que case 63 où il y aura plus de risque de tomber sur un dragon.
+- case 62 fait revenir à la case 20 par exemple ^^.
 - Boucle pour la création du plateau (Cf pour visuel compter en base 8)
 - Gérer les exceptions !
 - Commencer par faire marcher les 4 cases.

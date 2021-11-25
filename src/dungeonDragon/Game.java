@@ -2,11 +2,14 @@ package dungeonDragon;
 
 import java.util.ArrayList;
 import dungeonDragon.character.AbstractCharacter;
+import dungeonDragon.exceptions.OutOfBoard;
+import dungeonDragon.gameBoard.GameBoard;
 
 public class Game {
 	
 	private ArrayList<AbstractCharacter> characterList = new ArrayList<AbstractCharacter>();
 	Menu menu = new Menu();
+	GameBoard gameBoard = new GameBoard();
 	
 	public Game() {}
 	
@@ -26,7 +29,12 @@ public class Game {
 				menu.displayList(characterList);
 			}
 			else if(choice == 4) {
-				playGame();
+				try {
+					playGame();
+				} catch (OutOfBoard e) {
+					System.out.println("You Win !");
+				}
+
 			}
 		}
 		while (!exit);
@@ -68,7 +76,7 @@ public class Game {
 		return !characterList.isEmpty();
 	}
 	
-	public void playGame() { // (boolean isReady) (Paramètre)
+	public void playGame() throws OutOfBoard { // (boolean isReady) (Paramètre)
 		int position = 0;
 //		charactersReady();
 
@@ -82,6 +90,7 @@ public class Game {
 //
 //				position += diceRoll;
 				position += 1;
+				gameBoard.getCell(position);
 			}
 			while (position <= 3); // TODO repasser à 64 !
 

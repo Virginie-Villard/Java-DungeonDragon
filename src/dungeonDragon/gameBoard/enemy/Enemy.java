@@ -15,12 +15,11 @@ public abstract class Enemy extends Cell {
 	}
 
 	public Enemy(String name) {
-		this(1, name, 9, 10);
+		this(name, 9, 10);
 	}
 
 
-	public Enemy(int cellNumber, String name, int life, int force) {
-		super(cellNumber);
+	public Enemy(String name, int life, int force) {
 		this.setName(name);
 		this.setLife(life);
 		this.setForce(force);
@@ -34,7 +33,7 @@ public abstract class Enemy extends Cell {
 
 	// GETTERS et SETTERS ___________________________________________________________________________
 
-		public String getName() {
+	public String getName() {
 		return name;
 	}
 
