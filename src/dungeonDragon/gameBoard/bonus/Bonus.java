@@ -20,7 +20,7 @@ public abstract class Bonus extends Cell {
 	}
 
 	// GETTERS et SETTERS ___________________________________________________________________________
-	
+
 	public String getName() {
 		return name;
 	}
