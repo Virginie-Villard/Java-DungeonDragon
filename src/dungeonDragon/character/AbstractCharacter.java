@@ -1,6 +1,7 @@
 package dungeonDragon.character;
 
 import dungeonDragon.gameBoard.bonus.potions.HealingPotion;
+import dungeonDragon.gameBoard.enemy.Enemy;
 
 public abstract class AbstractCharacter {
 
@@ -41,7 +42,17 @@ public abstract class AbstractCharacter {
 	public void usePotion(HealingPotion potion) {
 		this.life += potion.getHealing();
 	}
-	
+
+	// FIGHT _________________________________________________________________________________
+
+	public void receiveDamage(Enemy enemy) {
+		this.life -= enemy.getForce();
+	}
+
+	public boolean isAlive() {
+		return life > 0;
+	}
+
 	
 	// GETTERS et SETTERS ___________________________________________________________________________
 	// Pour pouvoir utiliser les attributs privates de la classe.
@@ -68,7 +79,7 @@ public abstract class AbstractCharacter {
 		// System.out.println("Set character name: "+this.name);
 	}
 
-	protected int getForce() {
+	public int getForce() {
 		return force;
 	}
 

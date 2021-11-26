@@ -25,13 +25,14 @@ public class Main {
 	- EnergyProtection (filter) (le mettre par défaut dans la classe filtre)
 (et class filles si possible).
 
+- Finir plateau ! (64 cases)
 - Gérer les erreurs dans le Game
-	- Jouer sans perso... vérif
+	- (Jouer sans perso... vérif)
 	- afficher la liste sans perso
-- retirer force de perso et wizard -> remplacer dans wizard par intelligence
+- retirer force de perso et wizard -> remplacer dans wizard par intelligence !!!!!
 -> remettre la force en attribut de guerrier
 (donnera bcp plus de sens à l'héritage !)
-- remove press enter pour les stats
+- remove press enter pour les stats perso !
 - tirage au sort l'attribution des cases
 (lui donner des stats différentes en fonction de l'endroit sur le plateau)
 exemple case 1, a plus de chance d'obtenir une récompense ou un ennemi faible
@@ -42,6 +43,10 @@ que case 63 où il y aura plus de risque de tomber sur un dragon.
 	- lancers de dé (coups critiques / coups normaux / coups ratés) ?
 	- Perte des points de vie
 	- quand ennemi.vie =< 0, continuer jeu
+	- fuite ?
+	- lancer de dé pour effet de surprise (6 et 5 -> Ennemi surpris donc je commence
+		4 et 3 -> tirage au sort pour décider qui commence
+		2 et 1 -> Je me suis pris les pieds dans le tapis j'ai fait du bruit, tout le monde m'a entendu arriver ou est  sur le pieds de guerre. Il a l'avantage.
 - Gérer la mort / Game Over.
 
  */

@@ -5,7 +5,7 @@ import dungeonDragon.gameBoard.Cell;
 public abstract class AttackItem extends Cell {
 	
 	private String name;
-	private int attackLvl;
+	public int attackLvl;
 
 	public AttackItem(String name, int attackLvl) {
 		this.name = name;
@@ -31,7 +31,7 @@ public abstract class AttackItem extends Cell {
 		this.name = name;
 	}
 
-	protected int getAttackLvl() {
+	public int getAttackLvl() {
 		return attackLvl;
 	}
 

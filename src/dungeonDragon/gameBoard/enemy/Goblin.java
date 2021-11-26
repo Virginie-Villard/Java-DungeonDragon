@@ -12,5 +12,7 @@ public class Goblin extends Enemy {
     public void interaction(AbstractCharacter abstractCharacter) {
         System.out.println("A goblin stares at you with its nasty little eyes... " +
                 		"\nYou should fight him to go further");
+
+        this.receiveDamage(abstractCharacter);
     }
 }

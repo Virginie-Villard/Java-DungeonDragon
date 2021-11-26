@@ -24,9 +24,17 @@ public class Warrior extends AbstractCharacter {
 		super(name, life, force);
 	}
 
+	@Override
+	public int getForce() {
+		int weaponDamage = 0;
 
+		if(weapon != null) {
+			weaponDamage = weapon.getAttackLvl();
+		}
+		return super.getForce() + weaponDamage;
+	}
 
-	// GETTERS et SETTERS _____________________________________________________________________
+// GETTERS et SETTERS _____________________________________________________________________
 	// Pour pouvoir utiliser les attributs privates de la classe.
 
 
@@ -40,5 +48,12 @@ public class Warrior extends AbstractCharacter {
 
 	public void setWeapon(Weapon weapon) {
 		this.weapon = weapon;
+	}
+
+	public Weapon getWeapon() {
+		return weapon;
+	}
+	public int getWeaponAttack() {
+		return this.weapon.attackLvl;
 	}
 }

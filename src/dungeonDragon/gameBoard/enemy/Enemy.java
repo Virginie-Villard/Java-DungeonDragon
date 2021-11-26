@@ -1,5 +1,7 @@
 package dungeonDragon.gameBoard.enemy;
 
+import dungeonDragon.character.AbstractCharacter;
+import dungeonDragon.character.Warrior;
 import dungeonDragon.gameBoard.Cell;
 
 public abstract class Enemy extends Cell {
@@ -30,6 +32,20 @@ public abstract class Enemy extends Cell {
 				"\tLife : " + this.life);
 	}
 
+
+
+	// FIGHT _________________________________________________________________________________
+
+	public void receiveDamage(AbstractCharacter character) {
+		if(character instanceof Warrior) {
+			this.life -= character.getForce();
+		}
+
+	}
+
+	public boolean isAlive() {
+		return life > 0;
+	}
 
 	// GETTERS et SETTERS ___________________________________________________________________________
 
