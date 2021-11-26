@@ -9,6 +9,8 @@ public class Wizard extends AbstractCharacter {
 
 	private String defaultName = "Sabrina";
 	private int intelligence;
+	private Spell spell = null;
+	// private Filter filter = filter;
 
 	public Wizard() {
         this("");
@@ -42,5 +44,7 @@ public class Wizard extends AbstractCharacter {
 		intelligence = intelligence;
 	}
 
-
+	public void setSpell(Spell spell) {
+		this.spell = spell;
+	}
 }

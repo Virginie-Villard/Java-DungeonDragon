@@ -13,6 +13,7 @@ public class Sword extends Weapon {
     public void interaction(AbstractCharacter abstractCharacter) {
         System.out.println("When you arrive, you quickly check the Cell and find a sword under the dirt.");
         if (abstractCharacter instanceof Warrior) {
+            ((Warrior) abstractCharacter).setWeapon(this);
             System.out.println("This could be useful...");
         }
         else {

@@ -26,8 +26,11 @@ public class Main {
 (et class filles si possible).
 
 - Gérer les erreurs dans le Game
-	- Jouer sans perso
+	- Jouer sans perso... vérif
 	- afficher la liste sans perso
+- retirer force de perso et wizard -> remplacer dans wizard par intelligence
+-> remettre la force en attribut de guerrier
+(donnera bcp plus de sens à l'héritage !)
 - remove press enter pour les stats
 - tirage au sort l'attribution des cases
 (lui donner des stats différentes en fonction de l'endroit sur le plateau)

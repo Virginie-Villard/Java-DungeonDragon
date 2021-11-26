@@ -1,16 +1,21 @@
 package dungeonDragon.gameBoard.bonus.potions;
 
+import dungeonDragon.character.AbstractCharacter;
 import dungeonDragon.gameBoard.Cell;
 
-public abstract class Potion extends Cell {
+public abstract class HealingPotion extends Cell {
 
     protected String name;
     protected int healing;
 
-    public Potion(String name, int healing) {
+    public HealingPotion(String name, int healing) {
         this.setName(name);
         this.setHealing(healing);
+    }
 
+    @Override
+    public void interaction(AbstractCharacter abstractCharacter) {
+        System.out.println("Glowing in the dark, a healing potion is here.");
     }
 
     // GETTERS et SETTERS ___________________________________________________________________________
