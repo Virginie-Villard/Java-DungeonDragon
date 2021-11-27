@@ -56,14 +56,11 @@ public class Game {
 			// return false;
 		}
 		else if(!characterList.isEmpty()) {
-			System.out.println("Your character is in position 1");
 			isReady = true;
-			//return true;
 		}
 		else {
 			System.out.println("Critical error you will self-destruct !!!");
 			isReady = false;
-			//return false;
 		}
 
 		return isReady;
@@ -80,18 +77,20 @@ public class Game {
 	
 	public void playGame() throws OutOfBoard { // (boolean isReady) (Paramètre)
 		int position = 0;
+		System.out.print("\nPosition " + position + ", press Enter to launch 1 dice : ");
+		menu.getClavier().nextLine();
 //		charactersReady();
 
 		if(charactersReady()) {
 //			System.out.println("isReady = " + isReady);
 
 			do {
-				System.out.print("\nPosition " + position + ", press Enter to launch 1 dice : ");
 //				menu.getClavier().nextLine();
 //				int diceRoll = Dice.roll(1);
 //
 //				position += diceRoll;
 				position += 1;
+				System.out.print("\nPosition " + position + ", press Enter to launch 1 dice : ");
 				Cell currentCell = gameBoard.getCell(position);
 
 				currentCell.interaction(this.currentCharacter);

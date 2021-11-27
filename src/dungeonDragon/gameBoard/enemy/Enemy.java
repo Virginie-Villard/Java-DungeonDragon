@@ -37,10 +37,7 @@ public abstract class Enemy extends Cell {
 	// FIGHT _________________________________________________________________________________
 
 	public void receiveDamage(AbstractCharacter character) {
-		if(character instanceof Warrior) {
-			this.life -= character.getForce();
-		}
-
+		this.life -= character.getDamage();
 	}
 
 	public boolean isAlive() {

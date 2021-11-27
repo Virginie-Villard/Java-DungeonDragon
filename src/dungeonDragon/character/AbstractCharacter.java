@@ -9,22 +9,21 @@ public abstract class AbstractCharacter {
 	private String defaultName = "Bob";
 	private int life;
 	private int force;
+	private int intelligence;
 
 	public AbstractCharacter() {
         this("Undefined character");
     }
 	
 	public AbstractCharacter(String name) {
-		this(name, 9, 10 // , null, null
-		);
+		this(name, 9, 10, 10);
     }
 	
-	public AbstractCharacter(String name, int life, int force
-			// , AttackItem attackItem, DefenseItem defenseItem
-	) {
+	public AbstractCharacter(String name, int life, int force, int intelligence) {
 		this.setName(name);
 		this.setLife(life);
 		this.setForce(force);
+		this.setIntelligence(intelligence);
 	}
 
 	/* Utilisation de la méthode toString() pour mettre en forme l'objet Character dans la console
@@ -34,8 +33,8 @@ public abstract class AbstractCharacter {
 
 		return ("\n||\t -- " + name + " --" +
 				"\n||\t Life : " + this.life +
-				"\n||\t Force : " + this.force// +
-				// "\n||\t Specialty : " + specialty
+				"\n||\t Force : " + this.force +
+				"\n||\t Intelligence : " + intelligence
 			);
 	}
 
@@ -53,6 +52,9 @@ public abstract class AbstractCharacter {
 		return life > 0;
 	}
 
+	public int getDamage() {
+		return getDamage();
+	}
 	
 	// GETTERS et SETTERS ___________________________________________________________________________
 	// Pour pouvoir utiliser les attributs privates de la classe.
@@ -85,5 +87,13 @@ public abstract class AbstractCharacter {
 
 	protected void setForce(int force) {
 		this.force = force;
+	}
+
+	public int getIntelligence() {
+		return intelligence;
+	}
+
+	public void setIntelligence(int intelligence) {
+		this.intelligence = intelligence;
 	}
 }
