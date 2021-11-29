@@ -16,3 +16,4 @@ public class Goblin extends Enemy {
         this.receiveDamage(abstractCharacter);
     }
 }
+
