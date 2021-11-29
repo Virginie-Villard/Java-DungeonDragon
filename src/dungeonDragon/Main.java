@@ -23,6 +23,9 @@ public class Main {
 	- ObsidianShield (shield) (rajouter une différence d'absorbtion des dégâts)
 	- AstralProtection (filter) (rajouter une différence d'absorbtion des dégâts)
 	- EnergyProtection (filter) (le mettre par défaut dans la classe filtre)
+
+	- CellsFactory pour améliorer le code de la class GameBoard
+(avec entrée Dragon ou autre_ cells.set(index, factory)
 (et class filles si possible).
 
 - Finir plateau ! (64 cases)

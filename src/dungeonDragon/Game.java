@@ -85,11 +85,11 @@ public class Game {
 //			System.out.println("isReady = " + isReady);
 
 			do {
-//				menu.getClavier().nextLine();
-//				int diceRoll = Dice.roll(1);
-//
-//				position += diceRoll;
-				position += 1;
+				menu.getClavier().nextLine();
+				int diceRoll = Dice.roll(1);
+
+				position += diceRoll;
+//				position += 1;
 				System.out.print("\nPosition " + position + ", press Enter to launch 1 dice : ");
 				Cell currentCell = gameBoard.getCell(position);
 
