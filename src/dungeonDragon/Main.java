@@ -42,7 +42,7 @@ que case 63 où il y aura plus de risque de tomber sur un dragon.
 
 -- Améliorations :
 - case 62 fait revenir à la case 20 par exemple ^^
-- Boucle pour la création du plateau (Cf pour visuel compter en base 8)
+- Boucle pour la création visuelle du plateau (Cf pour visuel compter en base 8)
 - Gestion des combats :
 	- lancer de dé pour effet de surprise (6 et 5 -> Ennemi surpris donc je commence
 		4 et 3 -> tirage au sort pour décider qui commence
