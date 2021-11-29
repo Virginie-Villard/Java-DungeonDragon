@@ -5,6 +5,7 @@ import dungeonDragon.character.AbstractCharacter;
 import dungeonDragon.exceptions.OutOfBoard;
 import dungeonDragon.gameBoard.Cell;
 import dungeonDragon.gameBoard.GameBoard;
+import dungeonDragon.gameBoard.enemy.Enemy;
 
 public class Game {
 	
@@ -100,6 +101,19 @@ public class Game {
 		}
 	}
 
+	// FIGHTS _______________________________________________________________________________
+
+	public void fight(Cell currentCell, AbstractCharacter abstractCharacter, Enemy enemy) {
+		System.out.println("\t -- FIGHT --");
+
+		if(currentCell instanceof Enemy) {
+			menu.escapeChoice();
+		}
+
+		public void escapeFromFight() {
+			if(choice == 1)
+		}
+	}
 }
 
 
