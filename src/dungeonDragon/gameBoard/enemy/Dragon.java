@@ -6,7 +6,7 @@ import dungeonDragon.character.AbstractCharacter;
 public class Dragon extends Enemy {
 
     public Dragon() {
-        super("Cupid dragon", 8, 4);
+        super("Cupid dragon", 20, 4);
     }
 
     @Override
@@ -14,8 +14,8 @@ public class Dragon extends Enemy {
         return super.toString();
     }
 
-    @Override
-    public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
-        System.out.println("Oh no! You've come face to face with a greedy Dragon who thinks you want to steal his treasure!");
-    }
+//    @Override
+//    public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
+//        System.out.println("Oh no! You've come face to face with a greedy Dragon who thinks you want to steal his treasure!");
+//    }
 }

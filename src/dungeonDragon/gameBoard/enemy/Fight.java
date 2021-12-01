@@ -7,29 +7,37 @@ public class Fight {
 
     public Fight(Menu menu, AbstractCharacter abstractCharacter, Enemy enemy) {
 
+        // private String enemyDescription = enemy.getDescription();
         int newLifeEnemy = enemy.getLife();
         int newLifeCharacter = abstractCharacter.getLife();
 
         System.out.println("\t -- FIGHT --");
 
-        do {
-            // Choix de fuire :
+        // Choix de fuire :
+        int escapeC = menu.escapeChoice();
+        if (escapeC == 2) {
+            //RIEN
+        } else {
 
-            // L'ennemi se prend un coup :
-            newLifeEnemy = characterAttacks(abstractCharacter, enemy);
+            do {
+                // L'ennemi se prend un coup :
+                newLifeEnemy = characterAttacks(abstractCharacter, enemy);
+                System.out.println("Vous avez infligé à " + enemy.name + ", " + abstractCharacter.getDamage() + " points de dégats, il lui reste : " + enemy.getLife());
 
-            // Vérif si la vie de l'ennemi >0;
-            if (newLifeEnemy > 0) {
-                newLifeCharacter = enemyAttacks(abstractCharacter, enemy);
+                // Vérif si la vie de l'ennemi >0;
+                if (newLifeEnemy > 0) {
+                    newLifeCharacter = enemyAttacks(abstractCharacter, enemy);
+
+                    System.out.println(enemy.name + " vous a infligé " + enemy.getForce() + " points de dégats, il vous reste : " + abstractCharacter.getLife());
+                }
+
+                if (newLifeCharacter <= 0) {
+                    System.out.println("\n \t \t___________\n \t \t  Game Over\n \t \t___________");
+                } else if (newLifeEnemy <= 0) {
+                    System.out.println("Enemy dies.");
+                }
             }
-        }
-        while(newLifeEnemy > 0 || newLifeCharacter > 0);
-
-        if(newLifeCharacter <= 0) {
-            System.out.println("\n \t \t___________\n \t \t  Game Over\n \t \t___________");
-        }
-        else if(newLifeEnemy <= 0 ) {
-            System.out.println("Enemy dies.");
+            while (newLifeEnemy > 0 && newLifeCharacter > 0);
         }
     }
 
@@ -44,28 +52,6 @@ public class Fight {
         enemy.setLife(newLifeEnemy);
         return newLifeEnemy;
     }
-
-    // FUITE __________________________________________________________________________
-
-
-//        if (currentCell instanceof Enemy) {
-//            menu.escapeChoice();
-//        }
-
-//    public void escapeFromFight(int position) {
-//        int choice = Menu.escapeChoice();
-//        if(choice == 1) {
-//            int characterPosition = escape(position);
-//        }
-//    }
-//
-//    public int escape(int position) {
-//        System.out.print("Life level, 1 dice : ");
-//        position -= Dice.roll(1);
-//        return position;
-//    }
-
-
 }
 
 

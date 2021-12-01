@@ -31,13 +31,10 @@ tirage au sort l'attribution des cases
 
 - Gérer les erreurs dans le Game
 	- afficher la liste sans perso -> message d'erreur
-- remove "press enter" pour les stats perso ! (pénible !)
 - Gestion combats
 	- lancers de dé (coups critiques / coups normaux / coups ratés) ?
-	- Perte des points de vie
-	- quand ennemi.vie =< 0, continuer jeu
 	- fuite ?
-	- Gérer la mort / Game Over.
+- pouvoir gérer différentes "classes" d'ennemis (effets différents / protections différentes en fonction du perso...)
 
 -- Améliorations :
 - Pouvoir jouer à plusieurs joueurs avec des tours.
@@ -51,6 +48,7 @@ tirage au sort l'attribution des cases
 - Possibilité de sauver un 2ème perso qui nous aide (ou +).
 - Possibilité d'être attaqué par plusieurs ennemis sur une seule case
 - Possibilité de trouver un trésor en plus à la fin d'un ennemi difficile
+- Pouvoir tirer au sort son perso
 
  */
 

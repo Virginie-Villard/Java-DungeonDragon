@@ -5,16 +5,21 @@ import dungeonDragon.character.AbstractCharacter;
 
 public class Goblin extends Enemy {
 
+    private String descrition = "A goblin stares at you with its nasty little eyes... " +
+            "                \nYou should fight him to go further";
+
     public Goblin() {
-        super("Hideous Goblin", 4, 2);
+        super("Hideous Goblin", 10, 2);
+       // this.getDescription;
     }
 
-//    @Override
-//    public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
-//        System.out.println("A goblin stares at you with its nasty little eyes... " +
-//                		"\nYou should fight him to go further");
-//
-//        this.receiveDamage(abstractCharacter);
-//    }
+    public void displayGoblin() {
+        System.out.println("A goblin stares at you with its nasty little eyes... " +
+                		"\nYou should fight him to go further");
+    }
+
+    public String getDescrition() {
+        return descrition;
+    }
 }
 

@@ -2,10 +2,7 @@ package dungeonDragon.gameBoard.enemy;
 
 import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
-import dungeonDragon.character.Warrior;
 import dungeonDragon.gameBoard.Cell;
-import dungeonDragon.gameBoard.GameBoard;
-import dungeonDragon.gameBoard.enemy.Fight;
 
 public abstract class Enemy extends Cell {
 
