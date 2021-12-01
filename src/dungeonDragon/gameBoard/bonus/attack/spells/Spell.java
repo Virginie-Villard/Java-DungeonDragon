@@ -1,7 +1,7 @@
 package dungeonDragon.gameBoard.bonus.attack.spells;
 
+import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
-import dungeonDragon.character.Warrior;
 import dungeonDragon.character.Wizard;
 import dungeonDragon.gameBoard.bonus.attack.AttackItem;
 
@@ -16,7 +16,7 @@ public class Spell extends AttackItem {
 	}
 
 	@Override
-	public void interaction(AbstractCharacter abstractCharacter) {
+	public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
 		System.out.println("You find a book on a lectern, you open it and...");
 
 		if (abstractCharacter instanceof Wizard) {

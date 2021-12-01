@@ -1,5 +1,6 @@
 package dungeonDragon.gameBoard.bonus.protection;
 
+import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 import dungeonDragon.character.Warrior;
 
@@ -11,7 +12,7 @@ public class Shield extends DefenseItem {
 
 
 	@Override
-	public void interaction(AbstractCharacter abstractCharacter) {
+	public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
 		System.out.println("You find a Shield here.");
 
 		if (abstractCharacter instanceof Warrior) {

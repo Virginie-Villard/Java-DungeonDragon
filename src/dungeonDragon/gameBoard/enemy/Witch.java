@@ -1,5 +1,6 @@
 package dungeonDragon.gameBoard.enemy;
 
+import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 
 public class Witch extends Enemy {
@@ -8,13 +9,11 @@ public class Witch extends Enemy {
         super("Powerful witch", 6, 3);
     }
 
-    @Override
     public String toString() {
         return super.toString();
     }
 
-    @Override
-    public void interaction(AbstractCharacter abstractCharacter) {
+    public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
         System.out.println("There is a witch, beautiful but with a very strange glint in the eye");
     }
 }

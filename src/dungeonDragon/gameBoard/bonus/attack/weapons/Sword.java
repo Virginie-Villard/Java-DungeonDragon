@@ -1,5 +1,6 @@
 package dungeonDragon.gameBoard.bonus.attack.weapons;
 
+import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 import dungeonDragon.character.Warrior;
 
@@ -10,7 +11,7 @@ public class Sword extends Weapon {
     }
 
     @Override
-    public void interaction(AbstractCharacter abstractCharacter) {
+    public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
         System.out.println("When you arrive, you quickly check the Cell and find a sword under the dirt.");
         if (abstractCharacter instanceof Warrior) {
             ((Warrior) abstractCharacter).setWeapon(this);

@@ -1,5 +1,6 @@
 package dungeonDragon.gameBoard.bonus.potions;
 
+import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 import dungeonDragon.gameBoard.Cell;
 
@@ -14,7 +15,7 @@ public abstract class HealingPotion extends Cell {
     }
 
     @Override
-    public void interaction(AbstractCharacter abstractCharacter) {
+    public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
         System.out.println("Glowing in the dark, a healing potion is here.");
     }
 

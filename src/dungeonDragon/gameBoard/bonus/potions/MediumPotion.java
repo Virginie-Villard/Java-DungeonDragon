@@ -1,5 +1,6 @@
 package dungeonDragon.gameBoard.bonus.potions;
 
+import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 
 public class MediumPotion extends HealingPotion {
@@ -9,7 +10,7 @@ public class MediumPotion extends HealingPotion {
     }
 
     @Override
-    public void interaction(AbstractCharacter abstractCharacter) {
+    public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
         System.out.println("Wow ! Bursting the darkness, a medium potion of health give you 5 point of life!" +
                 "\nYour life increases by 5, now you're : ");
 

@@ -1,7 +1,7 @@
 package dungeonDragon.gameBoard.bonus.attack.spells;
 
+import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
-import dungeonDragon.character.Warrior;
 import dungeonDragon.character.Wizard;
 
 public class FlashSpell extends Spell {
@@ -11,7 +11,7 @@ public class FlashSpell extends Spell {
     }
 
     @Override
-    public void interaction(AbstractCharacter abstractCharacter) {
+    public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
         System.out.println("You find a spell oh flash...");
 
         if (abstractCharacter instanceof Wizard) {

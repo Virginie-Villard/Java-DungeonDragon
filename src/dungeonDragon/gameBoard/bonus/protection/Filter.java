@@ -1,5 +1,6 @@
 package dungeonDragon.gameBoard.bonus.protection;
 
+import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 import dungeonDragon.character.Wizard;
 
@@ -10,7 +11,7 @@ public class Filter extends DefenseItem {
 	}
 
 	@Override
-	public void interaction(AbstractCharacter abstractCharacter) {
+	public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
 		System.out.println("You found a very old book containing a defensive filter");
 
 		if (abstractCharacter instanceof Wizard) {

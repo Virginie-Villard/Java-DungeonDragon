@@ -1,5 +1,6 @@
 package dungeonDragon.gameBoard.bonus.attack.weapons;
 
+import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 import dungeonDragon.character.Warrior;
 
@@ -10,7 +11,7 @@ public class Cudgel  extends Weapon {
     }
 
     @Override
-    public void interaction(AbstractCharacter abstractCharacter) {
+    public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
         System.out.println("There was a corpse in the room holding a cudgel... ");
         if (abstractCharacter instanceof Warrior) {
             ((Warrior) abstractCharacter).setWeapon(this);

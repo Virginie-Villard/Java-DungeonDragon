@@ -19,7 +19,7 @@ public class GameBoard {
 
 	private ArrayList<Cell> cells = new ArrayList<Cell>();
 	// protected int idObject;
-	private Goblin goblin = new Goblin();
+	// private Goblin goblin = new Goblin();
 
 	/** @link: http://tutorials.jenkov.com/java-collections/set.html */
 	// private Set<Integer> enemies = Set.of(2, 5);

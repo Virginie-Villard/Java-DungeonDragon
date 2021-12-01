@@ -1,8 +1,11 @@
 package dungeonDragon.gameBoard.enemy;
 
+import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 import dungeonDragon.character.Warrior;
 import dungeonDragon.gameBoard.Cell;
+import dungeonDragon.gameBoard.GameBoard;
+import dungeonDragon.gameBoard.enemy.Fight;
 
 public abstract class Enemy extends Cell {
 
@@ -32,9 +35,16 @@ public abstract class Enemy extends Cell {
 				"\tLife : " + this.life);
 	}
 
+	// INTERACTION _________________________________________________________________________________
 
+	@Override
+	public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
+		System.out.println("This cell is occupied by an enemy");
 
-	// FIGHT _________________________________________________________________________________
+		Fight f = new Fight(menu, abstractCharacter, this);
+	}
+
+	// Fight _______________________________________________________________________________________
 
 	public void receiveDamage(AbstractCharacter character) {
 		this.life -= character.getDamage();
@@ -44,7 +54,7 @@ public abstract class Enemy extends Cell {
 		return life > 0;
 	}
 
-	// GETTERS et SETTERS ___________________________________________________________________________
+	// GETTERS et SETTERS __________________________________________________________________________
 
 	public String getName() {
 		return name;

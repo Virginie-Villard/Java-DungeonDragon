@@ -1,5 +1,6 @@
 package dungeonDragon.gameBoard.enemy;
 
+import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 
 public class Dragon extends Enemy {
@@ -14,7 +15,7 @@ public class Dragon extends Enemy {
     }
 
     @Override
-    public void interaction(AbstractCharacter abstractCharacter) {
+    public void interaction(AbstractCharacter abstractCharacter, Menu menu) {
         System.out.println("Oh no! You've come face to face with a greedy Dragon who thinks you want to steal his treasure!");
     }
 }
