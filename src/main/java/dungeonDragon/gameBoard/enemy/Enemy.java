@@ -4,7 +4,7 @@ import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 import dungeonDragon.gameBoard.Cell;
 
-public abstract class Enemy extends Cell {
+public abstract class Enemy implements Cell {
 
 	protected String name;
 	protected String defaultName = "Jean Villain";

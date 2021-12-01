@@ -17,6 +17,7 @@ public class Fight {
         int escapeC = menu.escapeChoice();
         if (escapeC == 2) {
             //RIEN
+            int rien = 0;
         } else {
 
             do {

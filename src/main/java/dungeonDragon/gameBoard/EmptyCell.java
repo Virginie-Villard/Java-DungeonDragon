@@ -3,7 +3,7 @@ package dungeonDragon.gameBoard;
 import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 
-public class EmptyCell  extends Cell {
+public class EmptyCell  implements Cell {
 
     public EmptyCell() {}
 

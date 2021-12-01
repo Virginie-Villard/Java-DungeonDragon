@@ -2,7 +2,7 @@ package dungeonDragon.gameBoard.bonus.protection;
 
 import dungeonDragon.gameBoard.Cell;
 
-public abstract class DefenseItem extends Cell {
+public abstract class DefenseItem implements Cell {
 	
 	private String defenseItemName;
 	private int defenseItemLvl;

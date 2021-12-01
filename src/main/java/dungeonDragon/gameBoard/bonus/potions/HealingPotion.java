@@ -4,7 +4,7 @@ import dungeonDragon.Menu;
 import dungeonDragon.character.AbstractCharacter;
 import dungeonDragon.gameBoard.Cell;
 
-public abstract class HealingPotion extends Cell {
+public abstract class HealingPotion implements Cell {
 
     protected String name;
     protected int healing;

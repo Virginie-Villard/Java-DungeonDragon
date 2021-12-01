@@ -2,7 +2,7 @@ package dungeonDragon.gameBoard.bonus;
 
 import dungeonDragon.gameBoard.Cell;
 
-public abstract class Bonus extends Cell {
+public abstract class Bonus implements Cell {
 
 	protected String name;
 	protected String defaultName = "Bonus";

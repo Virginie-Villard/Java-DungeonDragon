@@ -2,7 +2,7 @@ package dungeonDragon.gameBoard.bonus.attack;
 
 import dungeonDragon.gameBoard.Cell;
 
-public abstract class AttackItem extends Cell {
+public abstract class AttackItem implements Cell {
 	
 	private String name;
 	public int attackLvl;
