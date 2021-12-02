@@ -4,6 +4,12 @@ import main.java.dungeonDragon.character.DAO.WarriorDAO;
 
 import java.util.List;
 
+/**
+ * <b>La classe Main démarre le jeu.</b>
+ *
+ * Elle met en place aussi la base de données.
+ * @see WarriorDAO
+ */
 public class Main {
 
     public static void main(String[] args) {
