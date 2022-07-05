@@ -8,7 +8,7 @@ import dungeonDragon.character.Warrior;
 public class WarriorDAO {
 
     private final String BDD = "abstractCharacter";
-    private final String url ="http://localhost/" + BDD;
+    private final String url ="jdbc:mysql://localhost:3306/" + BDD;
             // "http://localhost/phpmyadmin/db_structure.php?server=1&db=abstractcharacter";
     private final String user = "Virginie";
     private final String pwd = "toto";

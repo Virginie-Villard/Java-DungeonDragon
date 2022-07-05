@@ -20,7 +20,7 @@ public class GameBoard {
 	// protected int idObject;
 	// private Goblin goblin = new Goblin();
 
-	/** @link: http://tutorials.jenkov.com/java-collections/set.html */
+	/* http://tutorials.jenkov.com/java-collections/set.html */
 	// private Set<Integer> enemies = Set.of(2, 5);
 
 	private final int COUNT = 64;

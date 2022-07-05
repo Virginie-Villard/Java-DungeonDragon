@@ -68,7 +68,7 @@ public class Game {
 
     /**
      * Better isReady function
-     * @return
+     * @return true if character is present
      */
     private boolean hasCharacter()
     {
